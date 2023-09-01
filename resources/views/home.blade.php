@@ -82,7 +82,7 @@
             'time' => '1-2 часа',
             'price' => 2500,
             'priceDescription' => 'cтоимость выезда мастера на аварийную ситуацию. Оценка обьема работ и стоимости обслуживания.',
-            'image' => 'images/services/diag.jpg',
+            'image' => 'images/services/viezd.jpg',
             'options' => ['Текст', 'Текст']
         ],
         (object) [
@@ -122,7 +122,7 @@
             (object) [
                 'title' => 'Плановый сервис',
                 'text' => 'Плановый сервис - раз в полгода снизит риски переполнения септика из-за закупорки насоса и  профилактирует поломки дорогостоящих запчастей.',
-                'image' => 'images/index/about/plan-serivce.jpg'
+                'image' => 'images/index/about/planovy_service.jpg'
             ],
             (object) [
                 'title' => 'Договор на оказание услуг',

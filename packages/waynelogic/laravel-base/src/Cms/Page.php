@@ -56,6 +56,7 @@ class Page
     private function defaults()
     {
         $this->siteName = env('SITE_NAME')??null;
+        $this->description = env('SITE_DESCRIPTION')??null;
         $this->title = $this->siteName;
     }
 }
