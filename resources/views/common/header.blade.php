@@ -3,7 +3,7 @@
         <div class="container py-3">
             <div class="flex max-sm:flex-col items-center justify-between">
                 <div class="flex items-center">
-                    <ul class="flex max-md:flex-col space-x-3">
+                    <ul class="flex max-md:flex-col max-md:space-y-2 md:space-x-3">
                         <li class="max-lg:hidden">Срочный вызов</li>
                         <li class="pr-3 md:border-r">
                             <a class="flex items-center" href="tel:@phone($page->data->phone)">
@@ -17,7 +17,7 @@
                         </li>
                     </ul>
                 </div>
-                <a class="flex items-center" href="mailto:{{ $page->data->email }}">
+                <a class="flex items-center max-md:mt-2" href="mailto:{{ $page->data->email }}">
                     <x-heroicon-o-envelope-open class="w-6 h-6"/>
                     <span class="ml-3">{{ $page->data->email }}</span>
                 </a>

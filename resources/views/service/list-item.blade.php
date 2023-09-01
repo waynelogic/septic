@@ -5,7 +5,7 @@
         'image' => $obService->image,
          'w' => 150, 'h' => 150
     ])
-    <h4 class="text-xl font-semibold" itemprop="name">{{ $obService->title }}</h4>
+    <h3 class="text-xl font-semibold" itemprop="name">{{ $obService->title }}</h3>
     <p class="mb-3" itemprop="description">{{ $obService->description }}</p>
     <p class="mb-4"><span class="text-primary font-semibold">Время работы:</span> {{ $obService->time }}</p>
 

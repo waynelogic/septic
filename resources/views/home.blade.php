@@ -3,8 +3,13 @@
 @section('content')
     <section class="relative isolate">
         <div class="absolute bg-black/50 w-full h-full z-[-1]"></div>
-        <img class="absolute w-full h-full object-cover object-top transition-all lg:object-center z-[-2]" src="images/services/technical-service.jpg" alt="">
-        <div class="container text-white pt-24 pb-32">
+        @include('ui.image', [
+            'alt' => 'Septic LOS',
+            'css' => 'absolute w-full h-full object-cover object-top transition-all lg:object-center z-[-2]',
+            'image' => 'images/services/technical-service.jpg',
+             'w' => 1280, 'h' => 900
+        ])
+        <div class="container text-white pt-16 pb-16 md:pt-24 md:pb-32">
             <h2 class="text-6xl text-[clamp(2rem,5vw,3.75rem)] font-semibold mb-10">Обслуживание, ремонт, установка септиков ЛОС СПб и Ленинградская обл</h2>
             <div class="flex max-sm:flex-col items-center max-sm:space-y-4 sm:space-x-4">
                 <a href="#services" class="btn btn-default max-sm:w-full">
@@ -156,7 +161,12 @@
                     </div>
                 @endforeach
                 <div class="flex max-md:flex-col bg-white shadow-round rounded-3xl overflow-hidden lg:col-span-2">
-                    <img src="images/index/about/emploee.png" alt="Безответственность персонала" class="max md:h-full md:max-xl:w-44 max-xl:object-cover max-xl:object-right">
+                    @include('ui.image', [
+                        'alt' => 'Ответственность персонала',
+                        'css' => 'max md:h-full md:max-xl:w-44 max-xl:object-cover max-xl:object-right',
+                        'image' => 'images/index/about/emploee.png',
+                         'w' => 221, 'h' => 224
+                    ])
                     <div class="p-6 py-10">
                         <h3 class="mb-4 text-2xl font-semibold">Ответственность персонала</h3>
                         <p>Наш персонал, занимающийся обслуживанием и ремонтом септиков, обладает всеми необходимыми знаниями, навыками и опытом для выполнения своих обязанностей.</p>
@@ -181,7 +191,12 @@
                         <div class="flex space-x-6 my-10">
                             @foreach($page->data->social as $key => $value)
                                 <a target="_blank" href="{{ $value }}" class="group bg-white shadow-round px-10 py-3 rounded-2xl transition-all hover:bg-primary">
-                                    <img src="images/social/{{ $key }}.svg" alt="{{ $key }}" class="group-hover:brightness-full">
+                                    @include('ui.image', [
+                                        'alt' => $key,
+                                        'css' => 'group-hover:brightness-full',
+                                        'image' => 'images/social/' . $key . '.svg',
+                                         'w' => 30, 'h' => 30
+                                    ])
                                 </a>
                             @endforeach
                         </div>

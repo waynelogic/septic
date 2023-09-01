@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'sans': ['Mont'],
+                'sans': ['Mont, sans-serif'],
             },
             colors: {
                 'silver' : {

@@ -2,7 +2,12 @@
     <div class="container py-6">
         <div class="flex flex-wrap items-center justify-between">
             <a href="#" class="flex items-center">
-                <img class="mr-4" src="images/common/logo.svg" width="50px" alt="">
+                @include('ui.image', [
+                    'alt' => 'Service LOS',
+                    'css' => 'mr-4',
+                    'image' => 'images/common/logo.svg',
+                     'w' => 50, 'h' => 50
+                ])
                 <span class="font-bold text-xl">Сервис ЛОС <br> У Анатольевича</span>
             </a>
             <button class="font-semibold">
@@ -12,7 +17,11 @@
                 <span class="font-semibold">Быстрая связь:</span>
                 @foreach($page->data->social as $key => $value)
                     <a target="_blank" href="{{ $value }}" class="block">
-                        <img src="images/social/{{ $key }}.svg" alt="{{ $key }}">
+                        @include('ui.image', [
+                            'alt' => $key,
+                            'image' => 'images/social/' . $key . '.svg',
+                             'w' => 30, 'h' => 30
+                        ])
                     </a>
                 @endforeach
             </div>
