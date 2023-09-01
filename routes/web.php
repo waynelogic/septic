@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Spatie\Sitemap\SitemapGenerator;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,8 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('generate-sitemap', function () {
+    SitemapGenerator::create('https://septiclos.ru/')
+        ->writeToFile(public_path('sitemap.xml'));
+});
