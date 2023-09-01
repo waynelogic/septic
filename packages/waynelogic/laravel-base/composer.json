@@ -1,0 +1,25 @@
+{
+    "name": "waynelogic/laravel-base",
+    "description": "Laravel Base package for Albus IT",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Waynelogic\\LaravelBase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Waynelogic"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Waynelogic\\LaravelBase\\LaravelBaseServiceProvider"
+            ]
+        }
+    }
+}

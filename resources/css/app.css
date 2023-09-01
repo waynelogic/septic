@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    button * {
+        @apply pointer-events-none
+    }
+    body {
+        @apply text-[#4B5258];
+    }
+    .container {
+        @apply mx-auto;
+    }
+    .btn {
+        @apply inline-flex items-center justify-center text-center px-5 py-3 rounded-full transition-all duration-300 font-semibold;
+    }
+    .btn-default {
+        @apply bg-primary text-white shadow-md hover:bg-primary-300;
+    }
+    .btn-white {
+        @apply bg-white text-[#222] shadow hover:bg-primary-300 hover:text-white;
+    }
+}
+
+@layer components {
+    .form-control {
+        @apply  block w-full px-4 py-3 rounded-xl border-gray-300 shadow-sm focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50
+    }
+    .reasons-grid > div {
+        @apply bg-primary;
+        span {
+            @apply text-primary;
+        }
+        &:nth-child(1), &:nth-child(4n)  {
+            @apply lg:bg-secondary;
+            span {
+                @apply lg:text-secondary;
+            }
+        }
+        &:nth-child(2n) {
+            @apply max-lg:bg-secondary;
+            span {
+                @apply max-lg:text-secondary;
+            }
+        }
+    }
+    .accordion-item {
+        @apply relative w-full;
+        &__button.active {
+            @apply bg-primary/10;
+        }
+        &__body {
+            @apply max-h-0 overflow-hidden transition-all;
+            &.active {
+                @apply max-h-screen
+            }
+        }
+    }
+}
