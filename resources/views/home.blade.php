@@ -3,11 +3,12 @@
 @section('content')
     <section class="relative isolate">
         <div class="absolute bg-black/50 w-full h-full z-[-1]"></div>
-        @include('ui.image', [
+        @include('ui.picture', [
             'alt' => 'Septic LOS',
             'css' => 'absolute w-full h-full object-cover object-top transition-all lg:object-center z-[-2]',
             'image' => 'images/services/technical-service.jpg',
-             'w' => 1280, 'h' => 900
+            'w' => 1280, 'h' => 900,
+            'mobile' => [580, 250]
         ])
         <div class="container text-white pt-16 pb-16 md:pt-24 md:pb-32">
             <h2 class="text-6xl text-[clamp(2rem,5vw,3.75rem)] font-semibold mb-10">Обслуживание, ремонт, установка септиков ЛОС СПб и Ленинградская обл</h2>
