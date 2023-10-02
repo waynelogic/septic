@@ -11,8 +11,8 @@ class HomeController extends Controller
 {
     public function index() {
         $data = (object) [
-            'phone' => '+7 (904) 636-44-14',
-            'schedule' => 'Пн - Пт: 09:00 - 18:00',
+            'phone' => '+7 (931) 307-83-77',
+            'schedule' => 'Пн - Вс: 09:00 - 21:00',
             'email' => 'info@septiclos.ru',
             'social' => [
                 'telegram' => 'https://t.me/MariyaPry',
@@ -21,7 +21,7 @@ class HomeController extends Controller
         ];
         return view('home', [
             'Agent' => new Agent(),
-            'page' =>  Page::make()->additionalData($data)
+            'page' => Page::make()->additionalData($data)
         ]);
     }
 }
